@@ -7,18 +7,24 @@ public class Scaler1 : MonoBehaviour
 {
     [SerializeField] private float _targetScale;
     [SerializeField] private float _duration;
-
+    private WaitForSeconds _waitSeconds;
     private float _startScale = 1;
 
-    void Update()
+    private void Start()
     {
-        if (transform.localScale.x == _startScale)
+        _waitSeconds = new WaitForSeconds(_duration);
+        StartCoroutine(ChangeScale());
+    }
+
+    private IEnumerator ChangeScale()
+    {
+        while (true)
         {
             transform.DOScale(_targetScale, _duration);
-        }
-        else if(transform.localScale.x == _targetScale)
-        {
+            yield return _waitSeconds;
+
             transform.DOScale(_startScale, _duration);
+            yield return _waitSeconds;
         }
     }
 }

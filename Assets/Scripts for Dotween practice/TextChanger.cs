@@ -27,6 +27,4 @@ public class TextChanger : MonoBehaviour
     {
         StartCoroutine(ChangeText());
     }
-
-    
 }

@@ -1075,8 +1075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f732dbcf75cd5334facc0e9e01981e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetColor: {r: 0.40870118, g: 0.5566038, b: 0.112896055, a: 0.99215686}
-  _startColor: {r: 1, g: 1, b: 1, a: 1}
+  _targetColor: {r: 1, g: 1, b: 1, a: 0.99215686}
+  _startColor: {r: 0, g: 0, b: 0, a: 1}
   _duration: 2
   _material: {fileID: 2100000, guid: 6b800280f7afb8245a632385bb79809f, type: 2}
 --- !u!136 &904599212
@@ -1253,8 +1253,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991297230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 15, z: -13}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 10.07, y: 14.99, z: -13}
+  m_LocalScale: {x: 1.34885, y: 1.34885, z: 1.34885}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

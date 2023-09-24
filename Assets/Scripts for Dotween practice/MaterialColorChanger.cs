@@ -9,21 +9,23 @@ public class MaterialColorChanger : MonoBehaviour
     [SerializeField] private Color _startColor;
     [SerializeField] private float _duration;
     [SerializeField] private Material _material;
-
+    private WaitForSeconds _waitSeconds;
+    
     private void Start()
     {
-        _startColor = _material.color;
+        _waitSeconds = new WaitForSeconds(_duration);
+        StartCoroutine(ChangeScale());
     }
 
-    private void Update()
+    private IEnumerator ChangeScale()
     {
-        if (_material.color == _startColor)
+        while (true)
         {
             _material.DOColor(_targetColor, _duration);
-        }
-        else if (_material.color == _targetColor)
-        {
+            yield return _waitSeconds;
+
             _material.DOColor(_startColor, _duration);
+            yield return _waitSeconds;
         }
     }
 }

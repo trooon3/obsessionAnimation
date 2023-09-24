@@ -10,22 +10,25 @@ public class SpriteColorChanger : MonoBehaviour
     [SerializeField] private Color _startColor;
     [SerializeField] private float _duration;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    private WaitForSeconds _waitSeconds;
 
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _startColor = _spriteRenderer.color;
+        _waitSeconds = new WaitForSeconds(_duration);
+        StartCoroutine(ChangeScale());
     }
 
-    private void Update()
+    private IEnumerator ChangeScale()
     {
-        if (_spriteRenderer.color == _startColor)
+        while (true)
         {
             _spriteRenderer.DOColor(_targetColor, _duration);
-        }
-        else if (_spriteRenderer.color == _targetColor)
-        {
+            yield return _waitSeconds;
+
             _spriteRenderer.DOColor(_startColor, _duration);
+            yield return _waitSeconds;
         }
     }
 }
