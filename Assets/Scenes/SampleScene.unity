@@ -1075,10 +1075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f732dbcf75cd5334facc0e9e01981e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetColor: {r: 1, g: 1, b: 1, a: 0.99215686}
-  _startColor: {r: 0, g: 0, b: 0, a: 1}
   _duration: 2
-  _material: {fileID: 2100000, guid: 6b800280f7afb8245a632385bb79809f, type: 2}
+  _targetMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  _meshRenderer: {fileID: 904599213}
 --- !u!136 &904599212
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1273,8 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetColor: {r: 0.9811321, g: 0.041651815, b: 0.041651815, a: 1}
-  _startColor: {r: 0, g: 0, b: 0, a: 0}
-  _duration: 6
+  _duration: 2
   _spriteRenderer: {fileID: 991297233}
 --- !u!212 &991297233
 SpriteRenderer:
@@ -1785,7 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e62a6d3ab33524997d43b3a295430c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 0
+  _value: 180
   _duration: 1
 --- !u!114 &2044702122
 MonoBehaviour:

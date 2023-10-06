@@ -12,6 +12,7 @@ public class Rotator1 : MonoBehaviour
     private void Update()
     {
         transform.DOLocalRotate(new Vector3(transform.rotation.x, _value, transform.rotation.z), _duration);
+
         _value++;
 
         if (_value > _maxValue)
